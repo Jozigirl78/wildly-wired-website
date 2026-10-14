@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Wildly Wired</title>
 <meta name="description" content="Wildly Wired: a neurodivergent community, honest stories and colourful creations. Connecting, creating, breaking stigma.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
@@ -76,9 +78,10 @@ nav a.shop-link { background: var(--yellow); color: var(--night); padding: .2rem
 .hero { padding-block: 4rem 3rem; text-align: left; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2rem; align-items: center; }
 @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
-.hero-art { position: relative; min-height: 22rem; }
-.moon { position: absolute; top: -2.5rem; right: -.5rem; width: clamp(5.5rem, 12vw, 8.5rem); height: auto; filter: drop-shadow(0 0 24px rgba(255,236,170,.45)); }
-@media (max-width: 860px) { .hero-art { min-height: 5rem; } }
+.hero-art { position: relative; }
+.hero-logo { display: block; width: min(100%, 24rem); height: auto; margin-left: auto; filter: drop-shadow(0 0 28px rgba(255, 95, 162, .35)); }
+.moon { position: absolute; top: -3rem; left: -.5rem; width: clamp(5.5rem, 12vw, 8.5rem); height: auto; filter: drop-shadow(0 0 24px rgba(255,236,170,.45)); }
+@media (max-width: 860px) { .hero-art { min-height: 0; } .hero-logo { width: min(70%, 16rem); margin: 0 auto; } .moon { left: auto; right: 0; } }
 .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-weight: 700; font-size: .85rem; color: var(--green); margin: 0 0 1rem; }
 h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3rem, 11vw, 6.5rem); line-height: .95; margin: 0; text-wrap: balance; }
 h1 .rb { background: var(--rainbow); -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block; padding: 0 .18em .08em 0; margin-right: -.18em; }
@@ -207,7 +210,7 @@ footer a { color: var(--ink); }
       <a class="btn" href="#about">Meet Lisa</a>
     </div>
    </div>
-   <div class="hero-art"><!-- space kept free for a future hero image -->
+   <div class="hero-art">
     <svg class="moon" viewBox="0 0 100 100" aria-hidden="true">
       <defs><mask id="crescent"><rect width="100" height="100" fill="#fff"/><circle cx="66" cy="38" r="38" fill="#000"/></mask>
       <radialGradient id="moonglow" cx=".35" cy=".4"><stop offset="0" stop-color="#fff8dc"/><stop offset="1" stop-color="#ffd84a"/></radialGradient></defs>
@@ -215,6 +218,7 @@ footer a { color: var(--ink); }
       <circle cx="30" cy="62" r="3.5" fill="#f2c94c" opacity=".6" mask="url(#crescent)"/>
       <circle cx="22" cy="44" r="2.2" fill="#f2c94c" opacity=".5" mask="url(#crescent)"/>
     </svg>
+    <img class="hero-logo" src="images/logo.webp" width="640" height="640" alt="Wildly Wired logo: a glittering pink and blue brain wearing a little crown, circled by a ring of stars, with the words Connecting, Creating, Breaking Stigma">
    </div>
    </div>
     <svg class="wire" viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
