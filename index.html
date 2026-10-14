@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wildly Wired</title>
+<meta name="description" content="Wildly Wired: a neurodivergent community, honest stories and colourful creations. Connecting, creating, breaking stigma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: a night-sky page with a rainbow "wire" running through it; single dark cosmic look on purpose for maximum contrast. */
+:root {
+  --night: #120c2b;      /* page background */
+  --night-2: #1d1442;    /* raised panels */
+  --ink: #fbf7ff;        /* body text, 16:1 on night */
+  --muted: #cfc6ea;      /* secondary text, 10:1 on night */
+  --pink: #ff5fa2;
+  --orange: #ff9a3c;
+  --yellow: #ffd84a;
+  --green: #4fe39a;
+  --blue: #4cc3ff;
+  --violet: #b98cff;
+  --rainbow: linear-gradient(90deg, var(--pink), var(--orange), var(--yellow), var(--green), var(--blue), var(--violet));
+  --display: "Shrikhand", "Cooper Black", Georgia, serif;
+  --body: "Atkinson Hyperlegible", "Verdana", system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body {
+  margin: 0;
+  background:
+    radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 78% 8%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 55% 32%, #ffe9a8 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 90% 42%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 30% 60%, #c9f1ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 8% 82%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 66% 76%, #ffd1e6 50%, transparent 51%),
+    radial-gradient(60rem 40rem at 85% -10%, #3a1d6e 0%, transparent 60%),
+    radial-gradient(50rem 35rem at -10% 30%, #2b1660 0%, transparent 60%),
+    var(--night);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+a { color: var(--yellow); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; border-radius: 6px; }
+.wrap {
+  max-width: 68rem; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.skip { position: absolute; left: -999px; top: 0; background: var(--yellow); color: var(--night); padding: .5rem 1rem; z-index: 10; }
+.skip:focus { left: 16px; }
+
+/* header */
+header.site {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: color-mix(in srgb, var(--night) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 3px solid transparent;
+  border-image: var(--rainbow) 1;
+}
+header.site .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1.5rem; padding-block: .75rem; }
+.logo { font-family: var(--display); font-size: 1.5rem; color: var(--ink); text-decoration: none; letter-spacing: .01em; }
+.logo span { background: var(--rainbow); -webkit-background-clip: text; background-clip: text; color: transparent; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.1rem; }
+nav a { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 1rem; }
+nav a:hover { color: var(--yellow); }
+nav a.shop-link { background: var(--yellow); color: var(--night); padding: .2rem .75rem; border-radius: 999px; }
+
+/* hero */
+.hero { padding-block: 4rem 3rem; text-align: left; }
+.eyebrow { text-transform: uppercase; letter-spacing: .14em; font-weight: 700; font-size: .85rem; color: var(--green); margin: 0 0 1rem; }
+h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3rem, 11vw, 6.5rem); line-height: .95; margin: 0; text-wrap: balance; }
+h1 .rb { background: var(--rainbow); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tagline { font-size: clamp(1.3rem, 3.5vw, 1.9rem); font-weight: 700; margin: 1.25rem 0 .25rem; max-width: 30ch; text-wrap: balance; }
+.pillars-line { color: var(--muted); font-weight: 700; letter-spacing: .06em; margin: 0 0 2rem; }
+.ctas { display: flex; flex-wrap: wrap; gap: .75rem; }
+.btn {
+  display: inline-block; font-weight: 700; text-decoration: none; font-size: 1.1rem;
+  padding: .85rem 1.5rem; border-radius: 999px; border: 3px solid var(--ink); color: var(--ink);
+  transition: transform .15s ease;
+}
+.btn:hover { transform: translateY(-2px) rotate(-1deg); }
+.btn.primary { background: var(--pink); border-color: var(--pink); color: #1a0716; }
+.btn.alt { background: var(--yellow); border-color: var(--yellow); color: var(--night); }
+
+.wire { display: block; width: 100%; height: 90px; margin-top: 2.5rem; }
+.wire path { fill: none; stroke-width: 6; stroke-linecap: round; }
+@keyframes drift { to { stroke-dashoffset: -400; } }
+.wire path { stroke-dasharray: 260 140; animation: drift 14s linear infinite; }
+
+/* sections */
+section { padding-block: 3.5rem; }
+h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.05; margin: 0 0 1rem; text-wrap: balance; }
+h3 { font-size: 1.3rem; margin: 0 0 .4rem; }
+.lede { color: var(--muted); max-width: 60ch; margin: 0 0 2rem; }
+
+.trio { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.25rem; }
+.trio article { background: var(--night-2); border-radius: 20px; padding: 1.5rem; border-top: 6px solid var(--c); min-width: 0; }
+.trio article p { margin: 0 0 1rem; color: var(--muted); }
+.trio article a { font-weight: 700; color: var(--c); }
+
+.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 2.5rem; align-items: start; }
+@media (max-width: 760px) { .about { grid-template-columns: 1fr; } }
+.portrait {
+  aspect-ratio: 4 / 5; max-width: 100%; border-radius: 28px; background: var(--rainbow);
+  padding: 6px; transform: rotate(-2deg);
+}
+.portrait div {
+  width: 100%; height: 100%; border-radius: 22px; background: var(--night-2);
+  display: grid; place-items: center; text-align: center; color: var(--muted); font-size: .95rem; padding: 1rem;
+}
+.portrait strong { display: block; font-family: var(--display); font-weight: 400; font-size: 2.6rem; color: var(--ink); }
+.about-copy p { max-width: 62ch; margin: 0 0 1.1rem; }
+.about-copy p.big { font-size: 1.35rem; font-weight: 700; }
+.about-copy .for-list { color: var(--yellow); font-weight: 700; }
+.signoff { font-family: var(--display); font-size: 1.6rem; color: var(--pink); margin-top: 1.5rem; }
+
+.community-panel {
+  background: var(--night-2); border-radius: 28px; padding: clamp(1.5rem, 4vw, 3rem);
+  border: 3px solid transparent; background-clip: padding-box; position: relative;
+}
+.community-panel::before { content: ""; position: absolute; inset: -3px; border-radius: 30px; background: var(--rainbow); z-index: -1; }
+.community-panel .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+.community-panel ul { margin: 0; padding-left: 1.2rem; }
+.community-panel li { margin-bottom: .45rem; }
+.community-panel li::marker { color: var(--green); }
+.rhythm { display: grid; gap: .5rem; }
+.rhythm div { display: flex; gap: .75rem; align-items: baseline; }
+.rhythm b { min-width: 6.5rem; color: var(--blue); }
+
+.series { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.25rem; }
+.series article { border: 2px dashed var(--c); border-radius: 20px; padding: 1.5rem; min-width: 0; }
+.series .soon { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: var(--c); color: var(--night); padding: .15rem .6rem; border-radius: 999px; margin-bottom: .75rem; }
+.series p { margin: 0; color: var(--muted); }
+
+.shop-band { text-align: center; }
+.shop-band h2 { margin-bottom: .5rem; }
+.shop-band p { color: var(--muted); margin: 0 auto 1.75rem; max-width: 50ch; }
+
+footer { border-top: 3px solid transparent; border-image: var(--rainbow) 1; padding-block: 2rem 3rem; color: var(--muted); font-size: 1rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; }
+footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+footer a { color: var(--ink); }
+.small { font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<!--
+  EDIT YOUR LINKS HERE: search this file for these placeholders and swap in your real links.
+  SHOP:      https://YOUR-SHOP.square.site
+  GROUP:     https://www.facebook.com/groups/YOUR-GROUP
+  INSTAGRAM: https://www.instagram.com/YOUR-HANDLE
+  FACEBOOK:  https://www.facebook.com/YOUR-PAGE
+  EMAIL:     https://YOUR-NEWSLETTER-SIGNUP-LINK
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#top">Wildly <span>Wired</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">Meet Lisa</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a class="shop-link" href="https://YOUR-SHOP.square.site">Shop</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap hero" id="top">
+    <p class="eyebrow">For neurodivergent minds &amp; the people who love them</p>
+    <h1>Wildly<br><span class="rb">Wired</span></h1>
+    <p class="tagline">Different minds. Same need to belong.</p>
+    <p class="pillars-line">Connecting • Creating • Breaking Stigma</p>
+    <div class="ctas">
+      <a class="btn primary" href="https://www.facebook.com/groups/YOUR-GROUP">Find your people</a>
+      <a class="btn alt" href="https://YOUR-SHOP.square.site">Visit the shop</a>
+      <a class="btn" href="#about">Meet Lisa</a>
+    </div>
+    <svg class="wire" viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 45 Q 125 0 250 45 T 500 45 T 750 45 T 1000 45" stroke="#ff5fa2"/>
+      <path d="M0 55 Q 125 10 250 55 T 500 55 T 750 55 T 1000 55" stroke="#ffd84a" style="animation-delay:-3s"/>
+      <path d="M0 65 Q 125 20 250 65 T 500 65 T 750 65 T 1000 65" stroke="#4cc3ff" style="animation-delay:-6s"/>
+    </svg>
+  </div>
+
+  <section aria-labelledby="what">
+    <div class="wrap">
+      <h2 id="what">One brand, three ways in</h2>
+      <p class="lede">No masking, no perfect replies, no need to have your life colour-coded. Pick the door that suits your brain today.</p>
+      <div class="trio">
+        <article style="--c: var(--pink)">
+          <h3>The Community</h3>
+          <p>Neurospicy Besties is our private friendship group for ND adults. Chat, share the chaos, celebrate small wins and maybe meet up IRL.</p>
+          <a href="https://www.facebook.com/groups/YOUR-GROUP">Join the group →</a>
+        </article>
+        <article style="--c: var(--yellow)">
+          <h3>The Shop</h3>
+          <p>Colourful creations, gifts and designs that celebrate brains that work differently. Every order helps keep the community going.</p>
+          <a href="https://YOUR-SHOP.square.site">Explore the shop →</a>
+        </article>
+        <article style="--c: var(--blue)">
+          <h3>The Stories</h3>
+          <p>Honest, funny, stigma-busting posts, and soon a blog, videos and a podcast about real life with a wildly wired brain.</p>
+          <a href="#blog">See what's coming →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-h">
+    <div class="wrap about">
+      <div class="portrait" role="img" aria-label="Photo of Lisa (placeholder)">
+        <div><span><strong>Lisa</strong>Founder, ADHD, chief overthinker.<br><span class="small">Swap this box for your photo.</span></span></div>
+      </div>
+      <div class="about-copy">
+        <h2 id="about-h">Hi, I'm Lisa, and I'm a little bit wildly wired myself</h2>
+        <p class="big">I feel things deeply. I think in fireworks. I have a million ideas before breakfast and occasionally forget to eat breakfast.</p>
+        <p>For a long time I wondered why the things that seemed easy for everyone else could feel so bloody hard for me. Understanding my ADHD changed that. The intensity, the overwhelm, the creativity and the big feelings had a name. They weren't flaws. They were wiring.</p>
+        <p>The hardest bit wasn't the forgotten appointments or the 47 open tabs. It was friendship. People misread you. You go quiet and they think you don't care. You get excited and they think it's too much. I've lost friendships along the way, and that hurt.</p>
+        <p>What I really wanted was people who <em>get it</em>. So I'm building the thing I wish I'd found: a brand, a community and a creative corner that brings people together, breaks stigma and reminds us that different doesn't mean broken.</p>
+        <p class="for-list">For the overthinkers, the oversharers, the big feelers, the late-diagnosed and the still-figuring-it-out crew.</p>
+        <p>I'm not doing this because I've got all the answers. I'm doing it because I know how much it matters to feel understood.</p>
+        <p class="signoff">Pull up a chair. Leave the masking at the door. 💖</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="community" aria-labelledby="community-h">
+    <div class="wrap">
+      <div class="community-panel">
+        <p class="eyebrow">The heart of Wildly Wired</p>
+        <h2 id="community-h">Neurospicy Besties</h2>
+        <p class="lede" style="margin-bottom:0">A private Facebook group for neurodivergent adults: diagnosed, waiting, self-identified or still wondering. Late replies forgiven. Big feelings welcome.</p>
+        <div class="cols">
+          <div>
+            <h3>What to expect</h3>
+            <ul>
+              <li>Friendly chat with people who get it</li>
+              <li>Local meetup ideas, starting with coffee and crafts</li>
+              <li>A kind, moderated space with clear rules</li>
+              <li>No medical advice, no gatekeeping, no spam</li>
+            </ul>
+          </div>
+          <div>
+            <h3>The weekly rhythm</h3>
+            <div class="rhythm">
+              <div><b>Monday</b><span>Brain weather check</span></div>
+              <div><b>Wednesday</b><span>Hyperfocus Hangout</span></div>
+              <div><b>Friday</b><span>Small Wins</span></div>
+              <div><b>Sunday</b><span>Shameless Promo thread</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ctas" style="margin-top:2rem">
+          <a class="btn primary" href="https://www.facebook.com/groups/YOUR-GROUP">Ask to join the group</a>
+          <a class="btn" href="https://YOUR-NEWSLETTER-SIGNUP-LINK">Get the monthly letter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" aria-labelledby="blog-h">
+    <div class="wrap">
+      <h2 id="blog-h">The Wildly Wired blog</h2>
+      <p class="lede">Stories, ideas and resources are on the way. Three series, one very busy brain.</p>
+      <div class="series">
+        <article style="--c: var(--pink)">
+          <span class="soon">Coming soon</span>
+          <h3>Wildly Wired &amp; Unfiltered</h3>
+          <p>Honest conversations, personal stories and stigma-breaking chats.</p>
+        </article>
+        <article style="--c: var(--green)">
+          <span class="soon">Coming soon</span>
+          <h3>Neurospicy Besties</h3>
+          <p>Friendship, funny relatable moments and finding your people.</p>
+        </article>
+        <article style="--c: var(--violet)">
+          <span class="soon">Coming soon</span>
+          <h3>The Brain Dump</h3>
+          <p>Creative ideas, practical tools and things I've learned the hard way.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop-band" aria-labelledby="shop-h">
+    <div class="wrap">
+      <h2 id="shop-h">Treat your wildly wired self</h2>
+      <p>Colourful creations for different minds. Checkout is handled safely by our Square shop.</p>
+      <a class="btn alt" href="https://YOUR-SHOP.square.site">Shop Wildly Wired</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p style="margin:0" class="logo">Wildly <span>Wired</span></p>
+      <p style="margin:.25rem 0 0" class="small">Connecting • Creating • Breaking Stigma</p>
+    </div>
+    <ul>
+      <li><a href="https://www.instagram.com/YOUR-HANDLE">Instagram</a></li>
+      <li><a href="https://www.facebook.com/YOUR-PAGE">Facebook</a></li>
+      <li><a href="https://www.facebook.com/groups/YOUR-GROUP">Neurospicy Besties</a></li>
+      <li><a href="https://YOUR-SHOP.square.site">Shop</a></li>
+    </ul>
+    <p class="small" style="flex-basis:100%;margin:0">Wildly Wired shares lived experience, not medical advice. If you're struggling, speak to your GP or call Samaritans free on 116 123.</p>
+  </div>
+</footer>
+</body>
+</html>
