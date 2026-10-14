@@ -2,7 +2,7 @@
 
 *Different minds. Same need to belong.* 🌈
 
-The one-page home for Wildly Wired: the Neurospicy Besties community, the Square shop and Wildly Wired Stories. It's a single file, `index.html`, with no build step. Fonts load from Google Fonts; everything else is inside the file.
+The one-page home for Wildly Wired: the Wildly Wired Humans community, the Square shop and Wildly Wired Stories. It's a single file, `index.html`, with no build step. Fonts load from Google Fonts; everything else is inside the file.
 
 ## 1. Swap in your real links
 
@@ -11,7 +11,7 @@ Open `index.html` and use find-and-replace (Ctrl+H, or Cmd+Option+F on a Mac) fo
 | Find this | Replace with | Where it shows up |
 |---|---|---|
 | `https://YOUR-SHOP.square.site` | your Square Online shop address | nav "Shop", hero button, shop section, footer (5 places) |
-| `https://www.facebook.com/groups/YOUR-GROUP` | your Neurospicy Besties group link | hero "Find your people", community section, footer (4 places) |
+| `https://www.facebook.com/groups/YOUR-GROUP` | your Wildly Wired Humans group link | hero "Find your people", community section, footer (4 places) |
 | `https://www.instagram.com/YOUR-HANDLE` | your Instagram profile | footer |
 | `https://www.facebook.com/YOUR-PAGE` | your Facebook Page | footer |
 | `https://YOUR-NEWSLETTER-SIGNUP-LINK` | your email sign-up form (Mailchimp, MailerLite, Kit, etc.) | "Get the monthly letter" button |
@@ -48,7 +48,7 @@ Netlify updates itself from GitHub automatically; Replit needs that pull-and-red
 - [ ] Search `index.html` for `YOUR-`: zero matches.
 - [ ] Click every button on your phone and on a laptop.
 - [ ] Shop button opens the Square shop (checkout always happens there, never on this site).
-- [ ] Group button opens the Neurospicy Besties join page.
+- [ ] Group button opens the Wildly Wired Humans join page.
 
 ## Brand notes
 
