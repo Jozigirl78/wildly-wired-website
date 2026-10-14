@@ -78,8 +78,7 @@ nav a.shop-link { background: var(--yellow); color: var(--night); padding: .2rem
 @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
 .hero-art { position: relative; min-height: 22rem; }
 .moon { position: absolute; top: -2.5rem; right: -.5rem; width: clamp(5.5rem, 12vw, 8.5rem); height: auto; filter: drop-shadow(0 0 24px rgba(255,236,170,.45)); }
-.friends { position: absolute; bottom: 0; left: 45%; transform: translateX(-50%); width: min(90%, 22rem); height: auto; -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent); mask-image: linear-gradient(to bottom, #000 78%, transparent); }
-@media (max-width: 860px) { .hero-art { min-height: 16rem; } .friends { width: min(80%, 20rem); } }
+@media (max-width: 860px) { .hero-art { min-height: 5rem; } }
 .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-weight: 700; font-size: .85rem; color: var(--green); margin: 0 0 1rem; }
 h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3rem, 11vw, 6.5rem); line-height: .95; margin: 0; text-wrap: balance; }
 h1 .rb { background: var(--rainbow); -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block; padding: 0 .18em .08em 0; margin-right: -.18em; }
@@ -208,7 +207,7 @@ footer a { color: var(--ink); }
       <a class="btn" href="#about">Meet Lisa</a>
     </div>
    </div>
-   <div class="hero-art">
+   <div class="hero-art"><!-- space kept free for a future hero image -->
     <svg class="moon" viewBox="0 0 100 100" aria-hidden="true">
       <defs><mask id="crescent"><rect width="100" height="100" fill="#fff"/><circle cx="66" cy="38" r="38" fill="#000"/></mask>
       <radialGradient id="moonglow" cx=".35" cy=".4"><stop offset="0" stop-color="#fff8dc"/><stop offset="1" stop-color="#ffd84a"/></radialGradient></defs>
@@ -216,7 +215,6 @@ footer a { color: var(--ink); }
       <circle cx="30" cy="62" r="3.5" fill="#f2c94c" opacity=".6" mask="url(#crescent)"/>
       <circle cx="22" cy="44" r="2.2" fill="#f2c94c" opacity=".5" mask="url(#crescent)"/>
     </svg>
-    <img class="friends" src="images/friends.webp" width="392" height="340" alt="Four friends sitting arm in arm with colourful hair, two making peace signs">
    </div>
    </div>
     <svg class="wire" viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
