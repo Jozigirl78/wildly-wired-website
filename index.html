@@ -78,10 +78,10 @@ nav a.shop-link { background: var(--yellow); color: var(--night); padding: .2rem
 .hero { padding-block: 4rem 3rem; text-align: left; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2rem; align-items: center; }
 @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
-.hero-art { position: relative; }
-.hero-logo { display: block; width: min(88%, 22rem); height: auto; margin: 3rem auto 0 0; filter: drop-shadow(0 0 22px rgba(185, 140, 255, .3)); }
-.moon { position: absolute; top: -3.5rem; right: -1rem; width: clamp(5.5rem, 12vw, 8.5rem); height: auto; filter: drop-shadow(0 0 24px rgba(255,236,170,.45)); }
-@media (max-width: 860px) { .hero-art { min-height: 0; } .hero-logo { width: min(70%, 16rem); margin: 1rem auto 0; } .moon { top: -2rem; right: 0; width: 4.5rem; } }
+.hero-art { position: relative; align-self: start; }
+.hero-logo { display: block; width: min(88%, 21rem); height: auto; margin: 0 0 0 auto; filter: drop-shadow(0 0 22px rgba(185, 140, 255, .3)); }
+.moon { position: absolute; top: 19rem; left: 0; width: clamp(5.5rem, 12vw, 8.5rem); height: auto; filter: drop-shadow(0 0 24px rgba(255,236,170,.45)); }
+@media (max-width: 860px) { .hero-art { min-height: 0; } .hero-logo { width: min(70%, 16rem); margin: 1rem auto 0; } .moon { top: auto; bottom: -1rem; left: 0; width: 4.5rem; } }
 .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-weight: 700; font-size: .85rem; color: var(--green); margin: 0 0 1rem; }
 h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3rem, 11vw, 6.5rem); line-height: .95; margin: 0; text-wrap: balance; }
 h1 .rb { background: var(--rainbow); -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block; padding: 0 .18em .08em 0; margin-right: -.18em; }
@@ -122,7 +122,8 @@ h3 { font-size: 1.3rem; margin: 0 0 .4rem; }
 .portrait img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 22px; }
 .about-side { display: grid; gap: 1.75rem; justify-items: center; }
 .about-side .portrait { width: 100%; }
-.overthinkers { width: min(100%, 20rem); height: auto; transform: rotate(2deg); }
+.overthinkers { width: min(100%, 20rem); border-radius: 24px; background: var(--rainbow); padding: 5px; transform: rotate(2deg); }
+.overthinkers img { display: block; width: 100%; height: auto; border-radius: 19px; }
 .about-copy p { max-width: 62ch; margin: 0 0 1.1rem; }
 .about-copy p.big { font-size: 1.35rem; font-weight: 700; }
 .about-copy .for-list { color: var(--yellow); font-weight: 700; }
@@ -133,7 +134,7 @@ h3 { font-size: 1.3rem; margin: 0 0 .4rem; }
   border: 3px solid transparent; background-clip: padding-box; position: relative;
 }
 .community-panel::before { content: ""; position: absolute; inset: -3px; border-radius: 30px; background: var(--rainbow); z-index: -1; }
-.community-banner { display: block; width: 100%; height: auto; aspect-ratio: 1024 / 550; object-fit: cover; border-radius: 18px; margin: 1.5rem 0 0; }
+.community-banner { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 18px; margin: 1.5rem 0 0; }
 .community-panel .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 2rem; margin-top: 1.5rem; }
 .community-panel ul { margin: 0; padding-left: 1.2rem; }
 .community-panel li { margin-bottom: .45rem; }
@@ -165,10 +166,11 @@ footer a { color: var(--ink); }
 
 <!--
   EDIT YOUR LINKS HERE: search this file for these placeholders and swap in your real links.
-  SHOP:      https://YOUR-SHOP.square.site
-  GROUP:     https://www.facebook.com/groups/YOUR-GROUP
-  INSTAGRAM: https://www.instagram.com/YOUR-HANDLE
-  FACEBOOK:  https://www.facebook.com/YOUR-PAGE
+  SHOP:      https://wildly-wired.square.site
+  GROUP:     https://www.facebook.com/groups/wildlywiredhumans/
+  WOMEN:     https://www.facebook.com/groups/wildlywiredwomen/
+  INSTAGRAM: https://www.instagram.com/wildlywiredhumans/
+  FACEBOOK:  https://www.facebook.com/wildlywired/
   EMAIL:     https://YOUR-NEWSLETTER-SIGNUP-LINK
 -->
 
@@ -190,7 +192,7 @@ footer a { color: var(--ink); }
         <li><a href="#about">Meet Lisa</a></li>
         <li><a href="#community">Community</a></li>
         <li><a href="#blog">Blog</a></li>
-        <li><a class="shop-link" href="https://YOUR-SHOP.square.site">Shop</a></li>
+        <li><a class="shop-link" href="https://wildly-wired.square.site">Shop</a></li>
       </ul>
     </nav>
   </div>
@@ -205,8 +207,8 @@ footer a { color: var(--ink); }
     <p class="tagline">Different minds. Same need to belong.</p>
     <p class="pillars-line">Connecting • Creating • Breaking Stigma</p>
     <div class="ctas">
-      <a class="btn primary" href="https://www.facebook.com/groups/YOUR-GROUP">Find your people</a>
-      <a class="btn alt" href="https://YOUR-SHOP.square.site">Visit the shop</a>
+      <a class="btn primary" href="https://www.facebook.com/groups/wildlywiredhumans/">Find your people</a>
+      <a class="btn alt" href="https://wildly-wired.square.site">Visit the shop</a>
       <a class="btn" href="#about">Meet Lisa</a>
     </div>
    </div>
@@ -236,12 +238,12 @@ footer a { color: var(--ink); }
         <article style="--c: var(--pink)">
           <h3>The Community</h3>
           <p>Wildly Wired Humans is our private friendship group for ND adults. Chat, share the chaos, celebrate small wins and maybe meet up IRL.</p>
-          <a href="https://www.facebook.com/groups/YOUR-GROUP">Join the group →</a>
+          <a href="https://www.facebook.com/groups/wildlywiredhumans/">Join the group →</a>
         </article>
         <article style="--c: var(--yellow)">
           <h3>The Shop</h3>
           <p>Colourful creations, gifts and designs that celebrate brains that work differently. Every order helps keep the community going.</p>
-          <a href="https://YOUR-SHOP.square.site">Explore the shop →</a>
+          <a href="https://wildly-wired.square.site">Explore the shop →</a>
         </article>
         <article style="--c: var(--blue)">
           <h3>The Stories</h3>
@@ -258,7 +260,7 @@ footer a { color: var(--ink); }
         <div class="portrait">
           <img src="images/lisa.webp" width="720" height="900" alt="Lisa, founder of Wildly Wired, smiling with gold glitter freckles">
         </div>
-        <img class="overthinkers" src="images/overthinkers.webp" width="405" height="386" loading="lazy" alt="Three friends laughing, with the words: Overthinkers, Oversharers, Big Feelers, Hyperfocusers, Late But Lovely, Always Ourselves">
+        <div class="overthinkers"><img src="images/overthinkers.webp" width="354" height="312" loading="lazy" alt="Three friends laughing, with the words: Overthinkers, Oversharers, Big Feelers, Hyperfocusers, Late But Lovely, Always Ourselves"></div>
       </div>
       <div class="about-copy">
         <h2 id="about-h">Hi, I'm Lisa, and I'm a little bit wildly wired myself</h2>
@@ -278,9 +280,9 @@ footer a { color: var(--ink); }
       <div class="community-panel">
         <p class="eyebrow">The heart of Wildly Wired</p>
         <h2 id="community-h">Wildly Wired Humans</h2>
-        <img class="community-banner" src="images/safe-space.webp" width="1024" height="550" loading="lazy" alt="A cosy garden nook with cushions, fairy lights and a pink neon sign reading: A safe space for neurodivergent girls">
+        <img class="community-banner" src="images/safe-space.webp" width="1200" height="800" loading="lazy" alt="A cosy garden nook with a purple sofa, cushions, sunflowers, fairy lights and a pink neon sign reading: A safe space for neurodivergent humans">
         <p class="lede" style="margin:1.5rem 0 0">A private Facebook group for neurodivergent adults: diagnosed, waiting, self-identified or still wondering. Late replies forgiven. Big feelings welcome.</p>
-        <p class="small" style="margin:.75rem 0 0;color:var(--pink);font-weight:700">Coming soon: Wildly Wired Women, a space for the very particular joys and chaos of being a neurodivergent woman. 💖</p>
+        <p class="small" style="margin:.75rem 0 0;color:var(--pink);font-weight:700">Also new: <a href="https://www.facebook.com/groups/wildlywiredwomen/" style="color:inherit">Wildly Wired Women</a>, a space for the very particular joys and chaos of being a neurodivergent woman. 💖</p>
         <div class="cols">
           <div>
             <h3>What to expect</h3>
@@ -302,8 +304,8 @@ footer a { color: var(--ink); }
           </div>
         </div>
         <div class="ctas" style="margin-top:2rem">
-          <a class="btn primary" href="https://www.facebook.com/groups/YOUR-GROUP">Ask to join the group</a>
-          <a class="btn" href="https://YOUR-NEWSLETTER-SIGNUP-LINK">Get the monthly letter</a>
+          <a class="btn primary" href="https://www.facebook.com/groups/wildlywiredhumans/">Ask to join the group</a>
+          <a class="btn" href="https://www.instagram.com/wildlywiredhumans/">Follow on Instagram</a><!-- swap back to "Get the monthly letter" with the sign-up link once the newsletter exists -->
         </div>
       </div>
     </div>
@@ -342,7 +344,7 @@ footer a { color: var(--ink); }
     <div class="wrap">
       <h2 id="shop-h">Treat your wildly wired self</h2>
       <p>Colourful creations for different minds. Checkout is handled safely by our Square shop.</p>
-      <a class="btn alt" href="https://YOUR-SHOP.square.site">Shop Wildly Wired</a>
+      <a class="btn alt" href="https://wildly-wired.square.site">Shop Wildly Wired</a>
     </div>
   </section>
 </main>
@@ -354,10 +356,11 @@ footer a { color: var(--ink); }
       <p style="margin:.25rem 0 0" class="small">Connecting • Creating • Breaking Stigma</p>
     </div>
     <ul>
-      <li><a href="https://www.instagram.com/YOUR-HANDLE">Instagram</a></li>
-      <li><a href="https://www.facebook.com/YOUR-PAGE">Facebook</a></li>
-      <li><a href="https://www.facebook.com/groups/YOUR-GROUP">Wildly Wired Humans</a></li>
-      <li><a href="https://YOUR-SHOP.square.site">Shop</a></li>
+      <li><a href="https://www.instagram.com/wildlywiredhumans/">Instagram</a></li>
+      <li><a href="https://www.facebook.com/wildlywired/">Facebook</a></li>
+      <li><a href="https://www.facebook.com/groups/wildlywiredhumans/">Wildly Wired Humans</a></li>
+      <li><a href="https://www.facebook.com/groups/wildlywiredwomen/">Wildly Wired Women</a></li>
+      <li><a href="https://wildly-wired.square.site">Shop</a></li>
     </ul>
     <p class="small" style="flex-basis:100%;margin:0">Wildly Wired shares lived experience, not medical advice. If you're struggling, speak to your GP or call Samaritans free on 116 123.</p>
   </div>

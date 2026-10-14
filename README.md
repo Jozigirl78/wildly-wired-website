@@ -10,10 +10,10 @@ Open `index.html` and use find-and-replace (Ctrl+H, or Cmd+Option+F on a Mac) fo
 
 | Find this | Replace with | Where it shows up |
 |---|---|---|
-| `https://YOUR-SHOP.square.site` | your Square Online shop address | nav "Shop", hero button, shop section, footer (5 places) |
-| `https://www.facebook.com/groups/YOUR-GROUP` | your Wildly Wired Humans group link | hero "Find your people", community section, footer (4 places) |
-| `https://www.instagram.com/YOUR-HANDLE` | your Instagram profile | footer |
-| `https://www.facebook.com/YOUR-PAGE` | your Facebook Page | footer |
+| ~~`https://YOUR-SHOP.square.site`~~ | done: https://wildly-wired.square.site | nav "Shop", hero button, shop section, footer (5 places) |
+| ~~`https://www.facebook.com/groups/YOUR-GROUP`~~ | done: https://www.facebook.com/groups/wildlywiredhumans/ (Women group: https://www.facebook.com/groups/wildlywiredwomen/) | hero "Find your people", community section, footer (4 places) |
+| ~~`https://www.instagram.com/YOUR-HANDLE`~~ | done: https://www.instagram.com/wildlywiredhumans/ | footer |
+| ~~`https://www.facebook.com/YOUR-PAGE`~~ | done: https://www.facebook.com/wildlywired/ | footer |
 | `https://YOUR-NEWSLETTER-SIGNUP-LINK` | your email sign-up form (Mailchimp, MailerLite, Kit, etc.) | "Get the monthly letter" button |
 
 The same list sits in a comment near the top of `index.html` (search for `EDIT YOUR LINKS HERE`). When you're done, search for `YOUR-` and you should get zero matches.
