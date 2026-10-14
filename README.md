@@ -20,28 +20,21 @@ The same list sits in a comment near the top of `index.html` (search for `EDIT Y
 
 **Images:** all pictures live in the `images/` folder (Lisa's photo, mood board pieces, and `sky.svg` for the stars and galaxies). To swap one, upload a new file with the same name.
 
-## 2. Put it online
+## 2. Put it online (Netlify)
 
-Pick one. Both are free for a site this size.
+The site is published by Netlify, which rebuilds it automatically every time a change is merged into `main`. `netlify.toml` already tells Netlify there's no build step, so there's nothing to configure.
 
-### Netlify (recommended: fastest, free custom domain support)
+**First-time setup**
+1. Go to [app.netlify.com](https://app.netlify.com) and sign up with GitHub.
+2. **Add new project → Import an existing project → GitHub**, and pick `wildly-wired-website`. If it isn't listed, click **Configure the Netlify app on GitHub** and give it access to this repo.
+3. Click **Deploy**. You get a `.netlify.app` link within a minute.
 
-1. Go to [app.netlify.com](https://app.netlify.com) and sign in with GitHub.
-2. **Add new site → Import an existing project → GitHub**, then pick this repo.
-3. Leave the build command **empty** and set the publish directory to `/` (the repo root).
-4. Click **Deploy**. You'll get a link like `wildly-wired.netlify.app` in under a minute.
-5. Every time a change is merged into `main`, Netlify redeploys on its own.
+**Custom domain (wildlywired.co.uk)**
+1. In Netlify: **Domain management → Add a domain**, enter `wildlywired.co.uk`.
+2. Netlify shows the DNS records to add. Copy them into your domain registrar's DNS settings.
+3. Once DNS updates (minutes to a few hours), Netlify switches on free HTTPS by itself.
 
-Optional: **Site configuration → Change site name** to get a nicer `.netlify.app` address, and **Domain management** to connect your own domain (e.g. `wildlywired.co.uk`).
-
-### Replit
-
-1. Go to [replit.com](https://replit.com), click **Create App → Import from GitHub**, and pick this repo.
-2. Replit detects a static HTML site. Press **Run** to preview it.
-3. Click **Deploy → Static** and set the public directory to `/`. Static deploys are the cheapest option and need no server.
-4. After you merge changes on GitHub, pull them into Replit (Git pane → Pull) and redeploy.
-
-Netlify updates itself from GitHub automatically; Replit needs that pull-and-redeploy step, which is why Netlify is the easier choice here.
+**Making changes:** ask Claude in the project thread; it opens a pull request here. Merge it, and Netlify publishes it. Don't edit the site in Replit or other AI builders, or you'll end up with two versions.
 
 ## 3. Before you share the link
 
