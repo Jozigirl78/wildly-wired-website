@@ -1,0 +1,4 @@
+# Netlify reads this automatically: no build step, publish the repo root.
+[build]
+  publish = "."
+  command = ""
