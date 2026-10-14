@@ -18,7 +18,7 @@ Open `index.html` and use find-and-replace (Ctrl+H, or Cmd+Option+F on a Mac) fo
 
 The same list sits in a comment near the top of `index.html` (search for `EDIT YOUR LINKS HERE`). When you're done, search for `YOUR-` and you should get zero matches.
 
-**Your photo:** the "Meet Lisa" section has a placeholder circle (search for `portrait`). To use a real photo, add it to the repo (e.g. `lisa.jpg`) and ask Claude to swap it in with proper alt text.
+**Images:** all pictures live in the `images/` folder (Lisa's photo, mood board pieces, and `sky.svg` for the stars and galaxies). To swap one, upload a new file with the same name.
 
 ## 2. Put it online
 
